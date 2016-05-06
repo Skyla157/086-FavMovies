@@ -15,28 +15,31 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var plot: UITextView!
     @IBOutlet weak var imdbLink: UIButton!
     @IBOutlet weak var movieImg: UIImageView!
-    
-    var movieDetail: Movie!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = movieDetail.title
+        self.navigationItem.title = DataService.instance.movieDetail.title
         
-        myDesc.text = movieDetail.myDesc
-        plot.text = movieDetail.plot
-        imdbLink.setTitle(movieDetail.imdbUrl, forState: .Normal)
-        movieImg.image = movieDetail.getMovieImg()
+        myDesc.text = DataService.instance.movieDetail.myDesc
+        plot.text = DataService.instance.movieDetail.plot
+        imdbLink.setTitle(DataService.instance.movieDetail.imdbUrl, forState: .Normal)
+        movieImg.image = DataService.instance.movieDetail.getMovieImg()
     }
     
     @IBAction func onLinkPress(sender: AnyObject) {
-        
-        if let targetURL = NSURL(string: movieDetail.imdbUrl!) {
+        if let targetURL = NSURL(string: DataService.instance.movieDetail.imdbUrl!) {
             let isAvailable = UIApplication.sharedApplication().canOpenURL(targetURL)
             if isAvailable {
                 UIApplication.sharedApplication().openURL(targetURL)
             } else {
                 NSLog("Can't use Safari");
             }
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "EditMovie" {
+            DataService.instance.isEditing = true
         }
     }
 }

@@ -19,10 +19,11 @@
 		A58F75431CDADFD8001EA898 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F75411CDADFD8001EA898 /* Movie.swift */; };
 		A58F75451CDAEC39001EA898 /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F75441CDAEC39001EA898 /* AddVC.swift */; };
 		A58F754A1CDBC33B001EA898 /* IMDBSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F75491CDBC33B001EA898 /* IMDBSearchVC.swift */; };
+		A59E693D1CDC7AB700D2ED8E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59E693C1CDC7AB700D2ED8E /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A58F75211CDADD84001EA898 /* 086-FavMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "086-FavMovies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A58F75211CDADD84001EA898 /* 086a-FavMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "086a-FavMovies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58F75241CDADD84001EA898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A58F75261CDADD84001EA898 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		A58F75291CDADD84001EA898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		A58F75411CDADFD8001EA898 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		A58F75441CDAEC39001EA898 /* AddVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
 		A58F75491CDBC33B001EA898 /* IMDBSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMDBSearchVC.swift; sourceTree = "<group>"; };
+		A59E693C1CDC7AB700D2ED8E /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,7 @@
 		A58F75221CDADD84001EA898 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A58F75211CDADD84001EA898 /* 086-FavMovies.app */,
+				A58F75211CDADD84001EA898 /* 086a-FavMovies.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,13 +70,13 @@
 		A58F75231CDADD84001EA898 /* 086-FavMovies */ = {
 			isa = PBXGroup;
 			children = (
+				A59E693E1CDD5F4C00D2ED8E /* Services */,
 				A58F75241CDADD84001EA898 /* AppDelegate.swift */,
 				A58F753B1CDADD95001EA898 /* Controller */,
 				A58F753A1CDADD90001EA898 /* View */,
 				A58F75391CDADD8A001EA898 /* Model */,
 				A58F752E1CDADD84001EA898 /* Assets.xcassets */,
 				A58F75331CDADD84001EA898 /* Info.plist */,
-				A58F752B1CDADD84001EA898 /* _86_FavMovies.xcdatamodeld */,
 			);
 			path = "086-FavMovies";
 			sourceTree = "<group>";
@@ -84,6 +86,7 @@
 			children = (
 				A58F75401CDADFD8001EA898 /* Movie+CoreDataProperties.swift */,
 				A58F75411CDADFD8001EA898 /* Movie.swift */,
+				A58F752B1CDADD84001EA898 /* _86_FavMovies.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -102,19 +105,27 @@
 			isa = PBXGroup;
 			children = (
 				A58F75261CDADD84001EA898 /* MainVC.swift */,
-				A58F75441CDAEC39001EA898 /* AddVC.swift */,
 				A58F753C1CDADFAF001EA898 /* DetailsVC.swift */,
 				A58F75491CDBC33B001EA898 /* IMDBSearchVC.swift */,
+				A58F75441CDAEC39001EA898 /* AddVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		A59E693E1CDD5F4C00D2ED8E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A59E693C1CDC7AB700D2ED8E /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A58F75201CDADD84001EA898 /* 086-FavMovies */ = {
+		A58F75201CDADD84001EA898 /* 086a-FavMovies */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A58F75361CDADD84001EA898 /* Build configuration list for PBXNativeTarget "086-FavMovies" */;
+			buildConfigurationList = A58F75361CDADD84001EA898 /* Build configuration list for PBXNativeTarget "086a-FavMovies" */;
 			buildPhases = (
 				A58F751D1CDADD84001EA898 /* Sources */,
 				A58F751E1CDADD84001EA898 /* Frameworks */,
@@ -124,9 +135,9 @@
 			);
 			dependencies = (
 			);
-			name = "086-FavMovies";
+			name = "086a-FavMovies";
 			productName = "086-FavMovies";
-			productReference = A58F75211CDADD84001EA898 /* 086-FavMovies.app */;
+			productReference = A58F75211CDADD84001EA898 /* 086a-FavMovies.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -145,7 +156,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A58F751C1CDADD84001EA898 /* Build configuration list for PBXProject "086-FavMovies" */;
+			buildConfigurationList = A58F751C1CDADD84001EA898 /* Build configuration list for PBXProject "086a-FavMovies" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -158,7 +169,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A58F75201CDADD84001EA898 /* 086-FavMovies */,
+				A58F75201CDADD84001EA898 /* 086a-FavMovies */,
 			);
 		};
 /* End PBXProject section */
@@ -186,6 +197,7 @@
 				A58F75271CDADD84001EA898 /* MainVC.swift in Sources */,
 				A58F753D1CDADFAF001EA898 /* DetailsVC.swift in Sources */,
 				A58F752D1CDADD84001EA898 /* _86_FavMovies.xcdatamodeld in Sources */,
+				A59E693D1CDC7AB700D2ED8E /* DataService.swift in Sources */,
 				A58F753F1CDADFCA001EA898 /* MovieCell.swift in Sources */,
 				A58F75421CDADFD8001EA898 /* Movie+CoreDataProperties.swift in Sources */,
 				A58F754A1CDBC33B001EA898 /* IMDBSearchVC.swift in Sources */,
@@ -307,7 +319,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skyla157.-86-FavMovies";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "086a-FavMovies";
 			};
 			name = Debug;
 		};
@@ -320,14 +332,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skyla157.-86-FavMovies";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "086a-FavMovies";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A58F751C1CDADD84001EA898 /* Build configuration list for PBXProject "086-FavMovies" */ = {
+		A58F751C1CDADD84001EA898 /* Build configuration list for PBXProject "086a-FavMovies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A58F75341CDADD84001EA898 /* Debug */,
@@ -336,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A58F75361CDADD84001EA898 /* Build configuration list for PBXNativeTarget "086-FavMovies" */ = {
+		A58F75361CDADD84001EA898 /* Build configuration list for PBXNativeTarget "086a-FavMovies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A58F75371CDADD84001EA898 /* Debug */,

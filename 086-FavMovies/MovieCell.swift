@@ -21,14 +21,4 @@ class MovieCell: UITableViewCell {
         posterImg.clipsToBounds = true
         posterImg.layer.cornerRadius = 4.0
     }
-    
-    func configureCell(movie: Movie) {
-        posterImg.image = movie.getMovieImg()
-        titleLbl.text = movie.title
-        decriptionLbl.text = movie.myDesc
-        urlLbl.text = movie.imdbUrl
-        bgImg.image = movie.getMovieImg()
-        
-        bgImg.clipsToBounds = true
-    }
 }

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A58F75201CDADD84001EA898"
-               BuildableName = "086-FavMovies.app"
-               BlueprintName = "086-FavMovies"
-               ReferencedContainer = "container:086-FavMovies.xcodeproj">
+               BuildableName = "086a-FavMovies.app"
+               BlueprintName = "086a-FavMovies"
+               ReferencedContainer = "container:086a-FavMovies.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A58F75201CDADD84001EA898"
-            BuildableName = "086-FavMovies.app"
-            BlueprintName = "086-FavMovies"
-            ReferencedContainer = "container:086-FavMovies.xcodeproj">
+            BuildableName = "086a-FavMovies.app"
+            BlueprintName = "086a-FavMovies"
+            ReferencedContainer = "container:086a-FavMovies.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A58F75201CDADD84001EA898"
-            BuildableName = "086-FavMovies.app"
-            BlueprintName = "086-FavMovies"
-            ReferencedContainer = "container:086-FavMovies.xcodeproj">
+            BuildableName = "086a-FavMovies.app"
+            BlueprintName = "086a-FavMovies"
+            ReferencedContainer = "container:086a-FavMovies.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A58F75201CDADD84001EA898"
-            BuildableName = "086-FavMovies.app"
-            BlueprintName = "086-FavMovies"
-            ReferencedContainer = "container:086-FavMovies.xcodeproj">
+            BuildableName = "086a-FavMovies.app"
+            BlueprintName = "086a-FavMovies"
+            ReferencedContainer = "container:086a-FavMovies.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

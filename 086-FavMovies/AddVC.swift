@@ -23,13 +23,13 @@ class AddVC: UIViewController, UITextViewDelegate, UIImagePickerControllerDelega
     @IBOutlet weak var uploadImgBtn: UIButton!
     @IBOutlet weak var plotPlaceholderLbl: UILabel!
     @IBOutlet weak var movieImg: UIImageView!
+    @IBOutlet weak var saveBtn: UIButton!
     
     var imdbURLString: String!
     var imagePicker: UIImagePickerController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Add Movie"
         
         imdbURLString = ""
         imagePicker = UIImagePickerController()
@@ -41,6 +41,21 @@ class AddVC: UIViewController, UITextViewDelegate, UIImagePickerControllerDelega
         searchBtn.layer.cornerRadius = 5.0
         plotTxt.layer.cornerRadius = 5.0
         descriptionTxt.layer.cornerRadius = 5.0
+        
+        if DataService.instance.isEditing {
+            titleTxt.text = DataService.instance.movieDetail!.title
+            descriptionTxt.text = DataService.instance.movieDetail!.myDesc
+            plotTxt.text = DataService.instance.movieDetail!.plot
+            imdbURLString = DataService.instance.movieDetail!.imdbUrl
+            movieImg.image = DataService.instance.movieDetail!.getMovieImg()
+            myDescPlaceholderLbl.hidden = true
+            plotPlaceholderLbl.hidden = true
+            navigationItem.title = "Edit Movie"
+            saveBtn.setTitle("Save Changes", forState: .Normal)
+            
+        } else {
+            navigationItem.title = "Add Movie"
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -53,42 +68,54 @@ class AddVC: UIViewController, UITextViewDelegate, UIImagePickerControllerDelega
         movieImg.image = image
     }
     
-    
-    @IBAction func onAddBtnPress(sender: AnyObject) {
-        if let title = titleTxt.text where title != "" {
+    @IBAction func onSaveBtnPress(sender: AnyObject) {
+        if titleTxt.text != nil && movieImg.image != nil  {
+            
+            if DataService.instance.isEditing {
+                managedObjectContext.deleteObject(DataService.instance.movieDetail as NSManagedObject)
+
+                do {
+                    try managedObjectContext.save()
+                } catch let error as NSError  {
+                    NSLog("Could not save \(error), \(error.userInfo)")
+                }
+            }
+
             let entity = NSEntityDescription.entityForName("Movie", inManagedObjectContext: managedObjectContext)!
             let movie = Movie(entity: entity, insertIntoManagedObjectContext: managedObjectContext)
-            movie.title = title
+            movie.title = titleTxt.text
             movie.plot = plotTxt.text
             movie.myDesc = descriptionTxt.text
             movie.imdbUrl = urlTxt.text
             
-            if movieImg.image != nil {
-                movie.setMovieImg(movieImg.image!)
-                managedObjectContext.insertObject(movie)
-                do {
-                    try managedObjectContext.save()
-                } catch {
-                    print("Could not save")
-                }
-                
-                self.navigationController?.popViewControllerAnimated(true)
-
-            } else {
-                if presentedViewController != nil{
-                    NSLog("Already showing alert")
-                    return
-                }
-                
-                let dialog = UIAlertController(title: "Missing Data", message: "Please add a picture.", preferredStyle: UIAlertControllerStyle.Alert)
-                let dismissAction: UIAlertAction = UIAlertAction(title: "Dismiss", style: .Cancel) { action -> Void in }
-                
-                dialog.addAction(dismissAction)
-                presentViewController(dialog, animated: true, completion: nil)
+            movie.setMovieImg(movieImg.image!)
+            managedObjectContext.insertObject(movie)
+            do {
+                try managedObjectContext.save()
+            } catch {
+                print("Could not save")
             }
+            if DataService.instance.isEditing {
+                self.navigationController?.popToRootViewControllerAnimated(true)
+            } else {
+                self.navigationController?.popViewControllerAnimated(true)
+            }
+
+        } else {
+            if presentedViewController != nil {
+                NSLog("Already showing alert")
+                return
+            }
+            
+            let dialog = UIAlertController(title: "Missing Data", message: "Missing image or movie title. Please add.", preferredStyle: UIAlertControllerStyle.Alert)
+            let dismissAction: UIAlertAction = UIAlertAction(title: "Dismiss", style: .Cancel) { action -> Void in }
+            
+            dialog.addAction(dismissAction)
+            presentViewController(dialog, animated: true, completion: nil)
         }
     }
     
+    //hides placeholder text when view is being edited
     func textViewDidBeginEditing(textView: UITextView) {
         switch (textView) {
         case plotTxt: plotPlaceholderLbl.hidden = true
