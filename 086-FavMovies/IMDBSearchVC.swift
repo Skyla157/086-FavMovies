@@ -23,7 +23,6 @@ class IMDBSearchVC: UIViewController, UINavigationControllerDelegate {
         container.addSubview(webView)
         
         loadRequest(movieTitle)
-        navigationItem.leftBarButtonItem = editButtonItem()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -59,7 +58,6 @@ class IMDBSearchVC: UIViewController, UINavigationControllerDelegate {
     
     @IBAction func onCopyBtnPress(sender: AnyObject) {
         imdbURLString = (webView.URL?.absoluteString)!
-        print(imdbURLString)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
