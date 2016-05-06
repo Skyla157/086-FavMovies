@@ -112,6 +112,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         case .Delete:
             if let indexPath = indexPath {
                 tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                do {
+                    try managedObjectContext.save()
+                } catch let err as NSError {
+                    print(err.description)
+                }
             }
             break;
         case .Update:
