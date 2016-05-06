@@ -20,7 +20,6 @@ class MovieCell: UITableViewCell {
         super.awakeFromNib()
         posterImg.clipsToBounds = true
         posterImg.layer.cornerRadius = 4.0
-        
     }
     
     func configureCell(movie: Movie) {
@@ -30,7 +29,4 @@ class MovieCell: UITableViewCell {
         urlLbl.text = movie.imdbUrl
         bgImg.image = movie.getMovieImg()
     }
-
-
-
 }

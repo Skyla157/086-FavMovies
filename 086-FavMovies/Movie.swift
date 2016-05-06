@@ -23,7 +23,6 @@ class Movie: NSManagedObject {
         let img = UIImage(data: self.image!)!
         return img
     }
-
 }
 
 var movies = [Movie]()

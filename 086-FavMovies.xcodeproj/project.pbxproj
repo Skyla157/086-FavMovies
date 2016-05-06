@@ -18,7 +18,6 @@
 		A58F75421CDADFD8001EA898 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F75401CDADFD8001EA898 /* Movie+CoreDataProperties.swift */; };
 		A58F75431CDADFD8001EA898 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F75411CDADFD8001EA898 /* Movie.swift */; };
 		A58F75451CDAEC39001EA898 /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F75441CDAEC39001EA898 /* AddVC.swift */; };
-		A58F75471CDB1F01001EA898 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F75461CDB1F01001EA898 /* DataService.swift */; };
 		A58F754A1CDBC33B001EA898 /* IMDBSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F75491CDBC33B001EA898 /* IMDBSearchVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +35,6 @@
 		A58F75401CDADFD8001EA898 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A58F75411CDADFD8001EA898 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		A58F75441CDAEC39001EA898 /* AddVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
-		A58F75461CDB1F01001EA898 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		A58F75491CDBC33B001EA898 /* IMDBSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMDBSearchVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,7 +68,6 @@
 		A58F75231CDADD84001EA898 /* 086-FavMovies */ = {
 			isa = PBXGroup;
 			children = (
-				A58F75481CDB1F0F001EA898 /* Services */,
 				A58F75241CDADD84001EA898 /* AppDelegate.swift */,
 				A58F753B1CDADD95001EA898 /* Controller */,
 				A58F753A1CDADD90001EA898 /* View */,
@@ -110,14 +107,6 @@
 				A58F75491CDBC33B001EA898 /* IMDBSearchVC.swift */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		A58F75481CDB1F0F001EA898 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				A58F75461CDB1F01001EA898 /* DataService.swift */,
-			);
-			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +181,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A58F75471CDB1F01001EA898 /* DataService.swift in Sources */,
 				A58F75451CDAEC39001EA898 /* AddVC.swift in Sources */,
 				A58F75431CDADFD8001EA898 /* Movie.swift in Sources */,
 				A58F75271CDADD84001EA898 /* MainVC.swift in Sources */,

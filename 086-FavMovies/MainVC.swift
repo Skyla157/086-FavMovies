@@ -30,6 +30,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         imageView.image = image
         navigationItem.titleView = imageView
         
+        //THIS CODE CLEARS EVERYTHING SAVED IN CORE DATA
 //        let entityDescription = NSEntityDescription.entityForName("Movie", inManagedObjectContext: managedObjectContext)
 //        
 //        let request = NSFetchRequest()
@@ -75,7 +76,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         } else {
             return MovieCell()
         }
-        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -63,7 +63,6 @@ class AddVC: UIViewController, UITextViewDelegate, UIImagePickerControllerDelega
             movie.myDesc = descriptionTxt.text
             movie.imdbUrl = urlTxt.text
             
-            
             if movieImg.image != nil {
                 movie.setMovieImg(movieImg.image!)
                 managedObjectContext.insertObject(movie)
@@ -87,8 +86,6 @@ class AddVC: UIViewController, UITextViewDelegate, UIImagePickerControllerDelega
                 dialog.addAction(dismissAction)
                 presentViewController(dialog, animated: true, completion: nil)
             }
-            
-            
         }
     }
     

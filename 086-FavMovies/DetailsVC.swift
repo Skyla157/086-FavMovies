@@ -11,7 +11,6 @@ import CoreData
 
 class DetailsVC: UIViewController {
 
-//    @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var myDesc: UITextView!
     @IBOutlet weak var plot: UITextView!
     @IBOutlet weak var imdbLink: UIButton!
