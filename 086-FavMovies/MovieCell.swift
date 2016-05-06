@@ -28,5 +28,7 @@ class MovieCell: UITableViewCell {
         decriptionLbl.text = movie.myDesc
         urlLbl.text = movie.imdbUrl
         bgImg.image = movie.getMovieImg()
+        
+        bgImg.clipsToBounds = true
     }
 }
