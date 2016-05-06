@@ -152,6 +152,7 @@
 				TargetAttributes = {
 					A58F75201CDADD84001EA898 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 98M8BM53F3;
 					};
 				};
 			};
@@ -313,7 +314,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "086-FavMovies/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skyla157.-86-FavMovies";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -324,7 +327,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "086-FavMovies/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skyla157.-86-FavMovies";
 				PRODUCT_NAME = "$(TARGET_NAME)";

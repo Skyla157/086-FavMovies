@@ -21,10 +21,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationItem.leftBarButtonItem = editButtonItem()
         
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 59.0/255, green: 165.0/255, blue: 162/255.0, alpha: 1)
-
-        
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
+        imageView.contentMode = .ScaleAspectFit
+        let image = UIImage(named: "logo.png")
+        imageView.image = image
+        navigationItem.titleView = imageView
         
 //        let entityDescription = NSEntityDescription.entityForName("Movie", inManagedObjectContext: managedObjectContext)
 //        

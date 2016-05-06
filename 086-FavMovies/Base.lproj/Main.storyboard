@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3aD-by-N7s">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -334,7 +333,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Title" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QZd-DD-ZgH">
                                                 <rect key="frame" x="0.0" y="0.0" width="342" height="40"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnS-Yw-sJp">
                                                 <rect key="frame" x="350" y="0.0" width="95" height="40"/>
@@ -508,8 +507,6 @@
         <!--SearchVC-->
         <scene sceneID="W78-27-Hsj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OTw-WU-yfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="T8w-Sx-mgL" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController id="bFz-C8-OcN" customClass="IMDBSearchVC" customModule="_86_FavMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Xj-If-KWY"/>
@@ -582,6 +579,8 @@
                         <outlet property="container" destination="Jr6-mN-yaP" id="fAW-AU-3A9"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OTw-WU-yfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="T8w-Sx-mgL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2648" y="834"/>
         </scene>
